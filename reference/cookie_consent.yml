@@ -2,7 +2,7 @@ openapi: 3.0.1
 servers:
   - url: 'https://{$$.env.store_domain}/api/storefront'
 info:
-  title: Storefront Cookie Consent API
+  title: Storefront Cookie Consent
   description: Storefront API for specifying consent to particular categories of cookies for compliance purposes.
   version: Storefront
 tags:
