@@ -10,7 +10,7 @@ tags:
 paths:
   /consent:
     post:
-      summary: Specify Shopper Cookie Consent Preferences
+      summary: Set Cookie Consent Preferences
       tags:
         - Customers
       responses:
