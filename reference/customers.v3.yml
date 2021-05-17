@@ -3353,7 +3353,7 @@ components:
                       description: Attribute ID.
                       type: integer
                       format: int32
-                    value:
+                    attribute_value:
                       description: 'Attribute value. This will always be a string, regardless of the attributes type.'
                       type: string
                       minLength: 0
@@ -3376,7 +3376,7 @@ components:
                       format: date-time
                   required:
                     - attribute_id
-                    - value
+                    - attribute_value
                     - customer_id
               meta:
                 title: Collection Meta
