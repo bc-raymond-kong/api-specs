@@ -61,7 +61,7 @@ components:
 
         2 - Functional
         3 - Analytics
-        4 - Targeting/Advertising
+        4 - Targeting; Advertising
 
        For further definition of these categories, see [Scripts API](https://developer.bigcommerce.com/api-docs/store-management/scripts).
       properties:
