@@ -37,9 +37,9 @@ paths:
         Sets the status of a customer's consent to allow data collection by cookies and scripts according to the following consent categories:
 
 
-    2. Analytics — These cookies provide statistical information on site usage so the store owner can improve the website over time.  
-    3. Functional — These cookies enable enhanced functionality, such as videos and live chat. If a shopper does not allow these, then some or all of these functions may not work properly. 
-    4. Targeting; Advertising — These cookies are used to create profiles or personalize content to enhance the user’s shopping experience.
+          2. Analytics — These cookies provide statistical information on site usage so the store owner can improve the website over time.  
+          3. Functional — These cookies enable enhanced functionality, such as videos and live chat. If a shopper does not allow these, then some or all of these functions may not work properly. 
+          4. Targeting; Advertising — These cookies are used to create profiles or personalize content to enhance the user’s shopping experience.
           
           
         This endpoint only works if the cookie consent feature is enabled. It is assumed the shopper has not consented to anything until a value is explicitly set. The request body must be populated with a complete set of allowed and denied categories.
