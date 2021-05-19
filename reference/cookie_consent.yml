@@ -3,10 +3,10 @@ servers:
   - url: 'https://{$$.env.store_domain}/api/storefront'
 info:
   title: Storefront Cookie Consent
-  description: Storefront API for specifying consent to particular categories of cookies for compliance purposes.
+  description: Specify shopper cookie consent preferences
   version: Storefront
 tags:
-  - name: Customers
+  - name: Consent
 paths:
   /consent:
     post:
