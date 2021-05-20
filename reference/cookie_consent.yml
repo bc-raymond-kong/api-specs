@@ -31,7 +31,7 @@ paths:
                     - 3
                   deny:
                     - 4
-        description: Data sent to the customer endpoint when creating a customer during checkout
+        description: Data sent to the (Update Customer Consent)[https://developer.bigcommerce.com/api-reference/store-management/customers-v3/customer-consent/customersconsentbycustomerid-put] Customer V3 endpoint when creating a customer during checkout
         required: true
       description: |-
         Sets the status of a customer's consent to allow data collection by cookies and scripts according to the following consent categories:
