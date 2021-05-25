@@ -4274,7 +4274,6 @@ components:
         attribute_value:
           description: 'Attribute value. This will always be a string, regardless of the attributes type.'
           type: string
-          description: 'Attribute value. This will always be a string, regardless of the attributes type.'
           minLength: 0
           maxLength: 255
           example: string
