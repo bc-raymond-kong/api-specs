@@ -4271,7 +4271,7 @@ components:
           description: Attribute ID.
           type: integer
           format: int32
-        attribute_value:
+        value:
           description: 'Attribute value. This will always be a string, regardless of the attributes type.'
           type: string
           minLength: 0
@@ -4284,7 +4284,7 @@ components:
           example: 8504
       required:
         - attribute_id
-        - attribute_value
+        - value
         - customer_id
     customerAttributeValue_Full:
       title: customerAttributeValue_Full
