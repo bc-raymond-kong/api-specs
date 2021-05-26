@@ -523,7 +523,6 @@ paths:
       summary: Delete a Channel Site
 
 security:
-  - X-Auth-Client: []
   - X-Auth-Token: []
 x-stoplight:
   docs:
