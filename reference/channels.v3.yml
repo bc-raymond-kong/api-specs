@@ -593,7 +593,8 @@ components:
         type: array
         items:
           type: string
-        example: 'facebook, amazon'
+        example:
+          - facebook, amazon
     date_created:
       name: date_created
       description: 'Filter items by date_created. For example, `date_created=2019-09-04T00:00:00`, `date_created=2019-09-04`, or `date_created=1567573200`'
