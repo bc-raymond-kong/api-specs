@@ -1652,7 +1652,7 @@ components:
       description: 'Indicates if a channel can create listings from the BigCommerce UI. Default value for this field is based on the channel type if not specified on create. Channel with the type of `pos` and `storefront` has a default value of `true`. Channel with the type of `marketplace` and `marketing` has a default value of `false`.'
     IsVisible:
       type: boolean
-      description: 'Indicates if a channel is visible on BigCommerce UI. Default value for this field is `true` if not specified on create.'
+      description: 'Indicates if a channel is visible within the BigCommerce merchant admin UI (control panel). If `false`, the channel will not show in Channel Manager nor in any channels dropdown throughout the UI. Default value for this field is `true` if not specified on create.'
     IsEnabled:
       deprecated: true
       type: boolean
