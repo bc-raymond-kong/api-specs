@@ -1063,16 +1063,10 @@ components:
               variant_id: 64
               state: active
               name: Terrarium with dinosaur
-              overrides:
-                price: 40
             - product_id: 80
               variant_id: 65
               state: active
               name: Terrarium with fish
-              overrides:
-                price: 40
-          overrides:
-            is_featured: true
     create_multiple_listings_req_example:
       value:
         - product_id: 80
@@ -1084,16 +1078,10 @@ components:
               variant_id: 64
               state: active
               name: Terrarium with dinosaur
-              overrides:
-                price: 40
             - product_id: 80
               variant_id: 65
               state: active
               name: Terrarium with fish
-              overrides:
-                price: 40
-          overrides:
-            is_featured: true
         - product_id: 100
           state: pending
           name: Women's Bold T-Shirt
@@ -1103,16 +1091,10 @@ components:
               variant_id: 91
               state: pending
               name: Small women's bold t-shirt
-              overrides:
-                price: 35
             - product_id: 100
               variant_id: 92
               state: pending
               name: Medium women's bold t-shirt
-              overrides:
-                price: 35
-          overrides:
-            is_featured: true
     update_single_listing_req_example:
       value:
         - listing_id: 882998595
@@ -1320,8 +1302,6 @@ components:
                 name: "Terrarium with dinosaur"
                 date_created: "2021-05-24T17:46:33Z"
                 date_modified: "2021-05-24T17:46:33Z"
-                overrides:
-                  price: 40
               - channel_id: 667159
                 product_id: 80
                 variant_id: 65
@@ -1329,10 +1309,6 @@ components:
                 name: "Terrarium with fish"
                 date_created: "2021-05-24T17:46:33Z"
                 date_modified: "2021-05-24T17:46:33Z"
-                overrides:
-                  price: 40
-            overrides:
-              is_featured: true
         meta:
           pagination:
             count: 1
@@ -1359,8 +1335,6 @@ components:
                 name: "Terrarium with dinosaur"
                 date_created: "2021-05-24T17:46:33Z"
                 date_modified: "2021-05-24T17:46:33Z"
-                overrides:
-                  price: 40
               - channel_id: 664177
                 product_id: 80
                 variant_id: 65
@@ -1368,10 +1342,6 @@ components:
                 name: "Terrarium with fish"
                 date_created: "2021-05-24T17:46:33Z"
                 date_modified: "2021-05-24T17:46:33Z"
-                overrides:
-                  price: 40
-            overrides:
-              is_featured: true
 
           - channel_id: 664177
             listing_id: 882789362
@@ -1389,8 +1359,6 @@ components:
                 name: "Small women's bold t-shirt"
                 date_created: "2021-05-24T17:46:33Z"
                 date_modified: "2021-05-24T17:46:33Z"
-                overrides:
-                  price: 35
               - channel_id: 664177
                 product_id: 100
                 variant_id: 92
@@ -1398,10 +1366,6 @@ components:
                 name: "Medium women's bold t-shirt"
                 date_created: "2021-05-24T17:46:33Z"
                 date_modified: "2021-05-24T17:46:33Z"
-                overrides:
-                  price: 35
-            overrides:
-              "is_featured": true
         meta:
           pagination:
             count: 2
@@ -1428,8 +1392,6 @@ components:
               name: "Terrarium with dinosaur"
               date_created: "2021-05-24T17:46:33Z"
               date_modified: "2021-05-24T17:46:33Z"
-              overrides:
-                price: 40
             - channel_id: 667159
               product_id: 80
               variant_id: 65
@@ -1437,10 +1399,6 @@ components:
               name: "Terrarium with fish"
               date_created: "2021-05-24T17:46:33Z"
               date_modified: "2021-05-24T17:46:33Z"
-              overrides:
-                price: 40
-          overrides:
-            is_featured: true
         meta: {}
 
     # Examples for error response
@@ -1705,22 +1663,16 @@ components:
       description: 'Default currency for the channel in [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) three character alphabetic format. Will be used on storefront when other currencies cannot.'
     ChannelProductName:
       type: string
-      description: Name of the product for this channel listing specifically. This is an optional field that can be used to override the product name in the catalog. However, it is recommended to use the overrides field for any override purposes.
+      description: Name of the product for this channel listing specifically. This is an optional field that can be used to override the product name in the catalog. 
     ChannelProductVariantName:
       type: string
-      description: Name of the product variant for this channel listing specifically. This is an optional field that can be used to override the name of the product variant in the catalog. However, it is recommended to use the overrides field for any override purposes.
+      description: Name of the product variant for this channel listing specifically. This is an optional field that can be used to override the name of the product variant in the catalog. 
     ChannelProductDescription:
       type: string
-      description: Description of the product for this channel listing specifically. This is an optional field that can be used to override the product description in the catalog. However, it is recommended to use the overrides field for any override purposes.
+      description: Description of the product for this channel listing specifically. This is an optional field that can be used to override the product description in the catalog. 
     ChannelProductVariantDescription:
       type: string
-      description: Description of the product variant for this channel listing specifically. This is an optional field that can be used to override the description of the product variant in the catalog. However, it is recommended to use the overrides field for any override purposes.
-    ChannelListingOverrides:
-      type: object
-      description: Json containing overrides for this channel listing.
-    ChannelProductVariantOverrides:
-      type: object
-      description: Json containing overrides for the product variant for this channel listing.
+      description: Description of the product variant for this channel listing specifically. This is an optional field that can be used to override the description of the product variant in the catalog. 
     ChannelListingDateCreated:
       type: string
       format: date-time
@@ -1897,8 +1849,6 @@ components:
           $ref: '#/components/schemas/ChannelProductDescription'
         variants:
           $ref: '#/components/schemas/ChannelProductMultipleVariants'
-        overrides:
-          $ref: '#/components/schemas/ChannelListingOverrides'
       required:
         - product_id
         - state
@@ -1921,8 +1871,6 @@ components:
           $ref: '#/components/schemas/ChannelProductDescription'
         variants:
           $ref: '#/components/schemas/ChannelProductMultipleVariants'
-        overrides:
-          $ref: '#/components/schemas/ChannelListingOverrides'
       required:
         - listing_id
         - product_id
@@ -1948,8 +1896,6 @@ components:
           $ref: '#/components/schemas/ChannelProductVariantName'
         description:
           $ref: '#/components/schemas/ChannelProductVariantDescription'
-        overrides:
-          $ref: '#/components/schemas/ChannelProductVariantOverrides'
       required:
         - product_id
         - variant_id
@@ -1976,8 +1922,6 @@ components:
           $ref: '#/components/schemas/ChannelListingVariantDateCreated'
         date_modified:
           $ref: '#/components/schemas/ChannelListingVariantDateModified'
-        overrides:
-          $ref: '#/components/schemas/ChannelProductVariantOverrides'
 
     ChannelWithoutCurrencies:
       type: object
@@ -2080,8 +2024,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/ChannelProductVariantFull'
-        overrides:
-          $ref: '#/components/schemas/ChannelListingOverrides'
     Error:
       type: object
       properties:
