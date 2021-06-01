@@ -1607,7 +1607,7 @@ components:
       description: 'Associated ID within a system / platform outside of BC.'
     IsListableFromUI:
       type: boolean
-      description: 'Indicates if a channel can create listings from the BigCommerce UI. Default value for this field is based on the channel type if not specified on create. Channel with the type of `pos` and `storefront` has a default value of `true`. Channel with the type of `marketplace` and `marketing` has a default value of `false`.'
+      description: 'Indicates if a channel can create listings from the BigCommerce UI. Default value for this field is based on the channel type and platform combination if not specified on create.'
     IsVisible:
       type: boolean
       description: 'Indicates if a channel is visible within the BigCommerce merchant admin UI (control panel). If `false`, the channel will not show in Channel Manager nor in any channels dropdown throughout the UI. Default value for this field is `true` if not specified on create.'
@@ -1617,7 +1617,7 @@ components:
       description: 'This field was originally used to turn on/off a channel but is deprecated. `status` should be used in place of `is_enabled`. Channel with `status` of `prelaunch`, `active`, or `connected` will have `is_enabled` set to `true`. Channel with `status` of `inactive`, `disconnected`, `archived`, `deleted`, or `terminated` will have `is_enabled` set to `false`.'
     ChannelStatus:
       type: string
-      description: 'The status of the channel; channel `type`, `platform`, and `status` must be a [valid combination](https://developer.bigcommerce.com/api-reference/store-management/channels#status). `terminated` is not valid for `PUT` or `POST` requests. `deleted` is not valid for `POST` requests. '
+      description: 'The status of the channel; channel `type`, `platform`, and `status` must be a [valid combination](https://developer.bigcommerce.com/api-reference/store-management/channels#status). `terminated` is not valid for `PUT` or `POST` requests. `deleted` is not valid for `POST` requests.'
       enum:
         - active
         - prelaunch
@@ -2216,3 +2216,4 @@ components:
                   - {language} The language string that the client is using
                 example: /my-amazing-product
       title: site_Full
+      
